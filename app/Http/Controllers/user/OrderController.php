@@ -51,6 +51,7 @@ class OrderController extends Controller
     }
 
     public function createOrder(Request $request) {
+        if(!auth() -> guard('web') -> check()) return redirect() -> back();
         $cart = session() -> get('cart');
         $productsInCart = [];
         $totalPrice = 0;
@@ -71,7 +72,7 @@ class OrderController extends Controller
         $count = count($productsInCart);
 
         //if(count($cart) <= 0) return redirect() -> route('cart');
-
+        
         return view('user.order-confirm',  compact('productsInCart', 'count', 'totalPrice'));
     }
 
@@ -133,8 +134,6 @@ class OrderController extends Controller
             'phone_number' => 'required|string|max:255',
         ]);
 
-        // http://localhost:8000/paymentorder
-
         $cart = session() -> get('cart');
         
         $productsInCart = [];
@@ -163,8 +162,10 @@ class OrderController extends Controller
 
         $order = $this -> orderRepository -> create($request -> all());
         $orderId = $order->id;
-        
+        $totalPrice = 0;
+
         foreach($productsInCart as $product) {
+            $totalPrice += $product->price * $product -> quantityInCart;
             DB::table('order_details') -> insert([
                 'addby_id' => auth() -> guard('web') -> user() -> id,
                 'product_id' => $product -> id,
@@ -180,7 +181,11 @@ class OrderController extends Controller
             }
         }
 
-        Mail::to(auth() -> guard('web') -> user() -> email)->send(new OrderNotiMail());
+        $user = auth() -> guard('web') -> user();
+
+        $order = $this -> orderRepository -> findById($orderId);
+        $order_details = $this -> orderDetailRepository -> findWhere(['order_id' => $orderId]);
+        Mail::to(auth() -> guard('web') -> user() -> email)->send(new OrderNotiMail($user,$order_details,$totalPrice, $order));
         
         if($request -> pay_method == '2') 
             return redirect() -> route('createpayment')

@@ -40,6 +40,7 @@ class BorrowController extends Controller
     }
 
     public function borrow (Request $request) {
+        if(!auth() -> guard('web') -> check()) return redirect()->back();
         $slug = $request->slug;
         $foundProduct = $slug ? $this->productRepository->findBySlug($slug) : null;
         $branches = DB::table('branches') -> get();
