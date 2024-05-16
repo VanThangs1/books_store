@@ -1,0 +1,31 @@
+Quản lý người đọc
+Quản lý thông tin người mượn sách
+- Thời gian mượn
+- Tên sách
+- Tác giả
+- Thời gian trả
+- Người cho mượn
+
+Quản lý số lượng sách(Thống kê sl sách còn lại,Tổng số sách có,Chi tiết, sl người mượn)
+
+
+
+-- 26/09/2023
+Style lại Validate
+Quản lý gán sách cho User mượn
+Quản lý sách quá thời hạn chưa trả
+Sách hết số lượng/khóa tạm thời( k gán được cho khách hàng )
+Thống kê User nào mượn nhiều nhất/ Hay trả chậm nhất
+Thống kê Sách được mượn nhiều nhất
+
+
+
+-- 30/09/2023 
+Thêm biểu đồ (Tổng mượn, tổng trả, 5 người mượn nhiều nhất, sách nhiều người mượn nhất)
+
+
+
+-- 03/10/2023
+Sửa lại ô Search (Mã, tên, số đt) -> 1
+Thêm đủ các chức năng thêm sửa xóa
+

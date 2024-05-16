@@ -1,0 +1,191 @@
+.product-detail {
+    display: flex;
+    justify-content: center;
+    padding: 7px 0;
+}
+
+.product-detail .overview {
+    border-radius: 5px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.product-detail .overview > div {
+    width: 50%;
+}
+
+.product-detail .overview .left {
+    padding: 0 40px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.product-detail .overview .left .btn-control {
+    margin-top: 13px;
+    display: flex;
+    justify-content: center;
+}
+
+.product-detail .overview .left .btn-control .btn {
+    padding: 11px 13px;
+    margin: 0 7px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #222222;
+    font-size: 1.6rem;
+    text-shadow: 0 0 1px #fff;
+}
+
+.product-detail .overview .left .btn-control .btn:hover {
+    opacity: 0.8;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid #B4BDFF!important;
+}
+
+.btn-outline:hover {
+    background-color: rgba(31, 87, 255, 0.1);
+    opacity: 0.6;
+}
+
+.btn-blue {
+    background-color: #9fb7ff;
+}
+
+.btn-pink {
+    background-color: var(--primary-color-2);
+}
+
+.product-detail .overview .left .btn-control .btn:focus {
+    outline: none;
+}
+
+.product-detail .overview img {
+    
+    max-height: 450px;
+    object-fit: contain;
+    border: 20px solid transparent;
+    outline: 2px double #ccc;
+    border-radius: 10px;
+}
+
+.product-detail .overview .right {
+    font-size: 1.6rem;
+}
+
+.product-detail .overview .right h3 {
+    font-size: 2.3rem;
+}
+
+.product-detail .overview .overview-info {
+    margin: 13px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-detail .overview .overview-info p {
+    width: 50%;
+    padding-right: 20px;
+    line-height: 25px;
+}
+
+.product-detail .overview .overview-info p span {
+    font-weight: bold;
+}
+
+.product-detail .overview .overview-info p a {
+    color: #6a90ff;
+}
+
+.product-detail .overview .right .price {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+}
+
+.product-detail .overview .right .price > div {
+    margin-right: 13px;
+}
+
+.product-detail .overview .right .real-price {
+    font-size: 2.6rem;
+    font-weight: 500;
+    color: #6a90ff;
+}
+
+.product-detail .overview .right .old-price {
+    text-decoration: line-through;
+    opacity: 0.9;
+}
+
+.product-detail .overview .right .discount {
+    padding: 7px 13px;
+    background-color: #2159ff;
+    color: #fff;
+    font-weight: 400;
+    border-radius: 7px;
+}
+
+.product-detail .product-info {
+    border-radius: 5px;
+    background-color: #fff;
+    margin-top: 7px;
+    padding: 20px;
+}
+
+.product-detail .product-info h2{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.pick-quantity {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+.pick-quantity p {
+    margin-right: 20px;
+}
+
+.pick-quantity input {
+    padding: 0 5px;
+    height: 35px;
+    width: 70px;
+    border: 1px solid #d3d1d1;
+    border-radius: 3px;
+}
+
+.pick-quantity input:focus {
+    border: 1px solid transparent;
+    outline: 1px solid #2159ff;
+}
+
+.product-des {
+    padding: 10px 5px;
+    margin-top: 13px;
+    font-size: 1.6rem;
+    position: relative;
+}
+
+.product-des::before {
+    top: 0px;
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #eee;
+}
+
+.product-des p {
+    margin-bottom: 7px;
+}

@@ -1,0 +1,130 @@
+.auth-form {
+    display: flex;
+    justify-content: center;
+    margin: 7px 0;
+}
+
+.auth-form > div {
+    padding: 20px;
+    overflow: hidden;
+    border-radius: 5px;
+    min-height: 100px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.6rem;
+}
+
+.auth-form .control {
+    display: flex;
+    justify-content: center;
+}
+
+.auth-form .control p {
+    position: relative;
+    width: 200px;
+    line-height: 30px;
+    text-align: center;
+    color: #686868;
+    margin: 0 13px;
+    cursor: pointer;
+}
+
+.auth-form .control p::before {
+    position: absolute;
+    display: block;
+    content: '';
+    background-color: #5b84ff;
+    height: 1px;
+    width: 100%;
+    bottom: 0;
+    width: 0;
+    opacity: 0.2;
+    transition: all 0.3s ease-in-out;
+}
+
+.auth-form .control p:hover::before,
+.auth-form .control .active::before {
+    width: 100%;
+    box-shadow: 0 1px 2px #5b84ff;
+    opacity: 1;
+}
+
+.auth-form .control .active {
+    color: #5b84ff;
+}
+
+.auth-form .form {
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    overflow: hidden;   
+}
+
+.auth-form .login,
+.auth-form .register { 
+    overflow: hidden;
+    min-height: 100px;
+    width: 0;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+}
+
+.auth-form .active-form {
+    width: 100%;
+}
+
+.auth-form .contain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    margin: 20px;
+}
+
+.auth-form .contain .input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.auth-form .contain .input label {
+    margin-bottom: 5px;
+    font-size: 1.7rem;
+    opacity: 0.9;
+}
+
+.auth-form .contain .input input {
+    height: 33px;
+    border: none;
+    outline: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0 13px;
+}
+
+.auth-form .contain .input input:focus,
+.auth-form .contain .input input:not(:placeholder-shown) {
+    outline: 1px solid rgb(196, 238, 255);
+    background-color: rgba(196, 238, 255, 0.2);
+}
+
+
+.auth-form .contain button {
+    height: 30px;
+    width: 160px;
+    border: none;
+    box-shadow: 0 0 2px #567bec;
+    border-radius: 7px;
+    background-color: var(--primary-color);
+    margin: 13px 0;
+    color: #464646;
+    font-size: 1.7rem;
+}
+
+.auth-form .contain button:focus {
+    outline: none;
+    box-shadow: 0 0 5px #567bec;
+}

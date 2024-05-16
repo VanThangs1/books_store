@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+@font-face {
+    font-family: 'Rocher';
+    src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+html {
+    font-size: 62.5%;
+    color: var(--text-color);
+}
+
+html , body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: var(--default-width);
+}
